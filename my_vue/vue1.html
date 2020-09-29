@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ <!-- 1. 将数据渲染进 DOM -->
 <html>
 <head>
     <title>Vue Demo</title>
@@ -6,14 +7,14 @@
 </head>
 <body>
     <div id="firstVue">
-    {{my_data}}
+         {{msg}}
     </div>
 </body>
 <script type="text/javascript">
     var myVue = new Vue({
         el:"#firstVue",
         data:{
-            my_data: "vue_demo"
+            msg: "hello,vue!"
         }
     })
 </script>
