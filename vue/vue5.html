@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="components-demo">
+    <button-counter>click</button-counter>
+    </div>
+</body>
+<script type="text/javascript">
+
+//定义button-counter组件
+Vue.component('button-counter',{
+    //定义数据
+    data:function(){
+        return {
+            count: 0
+        }
+    },
+    //定义方法
+    methods:{
+        clickAdd: function(){
+            this.count++
+        }
+    },
+    template:'<button @click="clickAdd">You clicked me {{count}} times</button>'
+})
+
+new Vue({
+     el: '#components-demo'
+     })
+
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="button1">
+    <bt>click</bt>
+    </div>
+</body>
+<script type="text/javascript">
+
+//定义一个组件
+Vue.component('bt',{
+    template:'<button>按钮</button>'
+})
+
+new Vue({
+     el: '#button1'
+     })
+
+</script>
+</html>
