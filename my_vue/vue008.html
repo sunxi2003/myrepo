@@ -1,29 +1,20 @@
 <!DOCTYPE html>
- <!-- v-for 循环-->
+ <!-- 8. if 条件 -->
 <html>
 <head>
     <title>Vue Demo</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
-    <div id="app-4">
-        <ol>
-          <li v-for="todo in todos">
-            {{ todo.text }}
-          </li>
-        </ol>
-      </div>
+  <div id="app-8">
+    <p v-if="seen">现在你看到我了</p>
+  </div>
 </body>
 <script type="text/javascript">
-var app4 = new Vue({
-  el: '#app-4',
+var myVue = new Vue({
+  el: '#app-8',
   data: {
-    todos: [
-      { text: '学习 JavaScript' },
-      { text: '学习 Vue' },
-      { text: '学习 php' },
-      { text: '学习 python' }
-    ]
+    seen: true
   }
 })
 </script>

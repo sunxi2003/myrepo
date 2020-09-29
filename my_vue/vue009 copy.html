@@ -8,28 +8,32 @@
 </head>
 
 <body>
-  <div id="app09">
+  <div id="app99">
     <ol>
       <cp_lists
-        v-bind:datas = myList
+        v-for="data in myList"
+        v-bind:datas="data"
+        v-bind:key="item.text"
       ></cp_lists>
     </ol>
   </div>
 </body>
 
 <script type="text/javascript">
-
+// 定义一个组件，名为‘cp_lists’
 Vue.component('cp_lists', {
   props: ['datas'],
   template: '<li>{{ datas.text }}</li>'
 })
-var myVue = new Vue({
-  el: '#app09',
+
+var app7 = new Vue({
+  el: '#app99',
   data: {
-    myList: [
-      { text: '蔬菜' },
-      { text: '奶酪' },
-      { text: '火腿肠' }
+    todos: [
+      { text: '学习 JavaScript' },
+      { text: '学习 Vue' },
+      { text: '学习 php' },
+      { text: '学习 python' }
     ]
   }
 })
