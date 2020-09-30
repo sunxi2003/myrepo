@@ -10,29 +10,28 @@
 <body>
   <div id="app09">
     <ol>
-      <cp_lists
-        v-bind:datas = myList
-      ></cp_lists>
+      <cp_lists v-bind:datas=myList></cp_lists>
     </ol>
   </div>
 </body>
 
 <script type="text/javascript">
 
-Vue.component('cp_lists', {
-  props: ['datas'],
-  template: '<li>{{ datas.text }}</li>'
-})
-var myVue = new Vue({
-  el: '#app09',
-  data: {
-    myList: [
-      { text: '蔬菜' },
-      { text: '奶酪' },
-      { text: '火腿肠' }
-    ]
-  }
-})
+  Vue.component('cp_lists', {
+    props: ['datas'],
+    template: '<li>{{ datas.text }}</li>'
+  })
+  var myVue = new Vue({
+    el: '#app09',
+    data: {
+      myList: [
+        { text: '学习 JavaScript' },
+        { text: '学习 Vue' },
+        { text: '学习 php' },
+        { text: '学习 python' }
+      ]
+    }
+  })
 </script>
 
 </html>
