@@ -6,14 +6,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
-    <div id="firstVue">
+    <div id="app2">
         <button v-on:click="clickButton">Click Me</button>
         <p>{{my_data}}</p>
     </div>
 </body>
 <script type="text/javascript">
 var myVue = new Vue({
-    el:'#firstVue',
+    el:'#app2',
     data:{
         my_data: "test"
     },
