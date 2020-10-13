@@ -41,33 +41,34 @@
     </div>
 </body>
 <script type="text/javascript">
-    var vm=new Vue({
-  el: '#form',
-  data: {
-    //初始值
-    username:'username  ',
-    age:18,
-    checked : false,
-      checkedNames: ['Runoob']
-  },
-  methods:{
-    //提交表单
-    submit:function(){
-      var params=new Object();
-      params.username=this.username;
-      params.age=this.age;
-      params.checked=this.checked;
-      params.checkedNames=this.checkedNames;
-      alert("formdata："+JSON.stringify(params));
-    }
-  }
-});
-  
-//vue外部获取vue内部值
-console.log(vm.username);
-console.log(vm.age);
-console.log(vm.checked);
-console.log(vm.checkedNames);
+    var vm = new Vue({
+        el: '#form',
+        data: {
+            //初始值
+            username: 'zhangsan',
+            age: 18,
+            checked: false,
+            checkedNames: ['Runoob']
+        },
+        methods: {
+            //提交表单
+            submit: function () {
+                var params = new Object();
+                params.username = this.username;
+                params.age = this.age;
+                params.checked = this.checked;
+                params.checkedNames = this.checkedNames;
+                alert("formdata：" + JSON.stringify(params));
+            }
+        }
+    });
+
+    //vue外部获取vue内部值
+    console.log(vm.username);
+    console.log(vm.age);
+    console.log(vm.checked);
+    console.log(vm.checkedNames);
+
 </script>
 
 </html>
